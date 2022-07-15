@@ -17,6 +17,8 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: hello-python
+  labels:
+        app: hello-python
 spec:
   replicas: 2
   template:

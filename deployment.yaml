@@ -28,7 +28,7 @@ spec:
     spec:
       containers:
       - name: hello-python
-        image: hello-python:latest
-        imagePullPolicy: Never
+        image: public.ecr.aws/s7j9a1w6/docker-demo:latest
+        imagePullPolicy: Always
         ports:
         - containerPort: 5000

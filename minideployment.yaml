@@ -10,7 +10,7 @@ spec:
   ports:
   - name: http
     protocol: TCP
-    port: 7010
+    port: 7011
     targetPort: 5000
   type: LoadBalancer
 
@@ -33,7 +33,7 @@ spec:
     spec:
       containers:
       - name: hello-python
-        image: hello-python:latest
+        image: phanick/hello-python:4
         imagePullPolicy: Always
         ports:
         - containerPort: 5000

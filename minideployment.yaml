@@ -10,7 +10,7 @@ spec:
   ports:
   - name: http
     protocol: TCP
-    port: 7011
+    port: 6000
     targetPort: 5000
   type: LoadBalancer
 

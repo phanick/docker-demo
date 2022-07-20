@@ -33,7 +33,7 @@ spec:
     spec:
       containers:
       - name: hello-python
-        image: phanick/hello-python:latest
+        image: phanick/hello-python:12
         imagePullPolicy: Always
         ports:
         - containerPort: 5000

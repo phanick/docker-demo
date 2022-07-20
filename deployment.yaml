@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: Service
 metadata:
-  app: hello-python
-  k8s-app: hello-python
-  name: hello-python
+  app: my-python
+  k8s-app: my-python
+  name: my-python
 spec:
   selector:
-    app: hello-python
+    app: my-python
   ports:
   - name: http
     protocol: TCP
@@ -19,21 +19,21 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: hello-python
+  name: my-python
   
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: hello-python
+      app: my-python
   template:
     metadata:
       labels:
-        app: hello-python
+        app: my-python
     spec:
       containers:
-      - name: hello-python
-        image: phanick/hello-python:16
+      - name: my-python
+        image: phanick/my-python:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 5000

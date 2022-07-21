@@ -32,6 +32,6 @@ spec:
       containers:
       - name: new-python
         image: phanick/new-python:22
-        imagePullPolicy: Never
+        imagePullPolicy: Always
         ports:
         - containerPort: 5000

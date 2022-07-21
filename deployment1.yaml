@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: a1-python
+  name: a2-python
 spec:
   selector:
-    app: a1-python
+    app: a2-python
   ports:
   - name: http
     protocol: TCP
@@ -17,21 +17,21 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: a1-python
+  name: a2-python
   
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: a1-python
+      app: a2-python
   template:
     metadata:
       labels:
-        app: a1-python
+        app: a2-python
     spec:
       containers:
-      - name: a1-python
-        image: phanick/a1-python:1
+      - name: a2-python
+        image: phanick/a2-python:2
         imagePullPolicy: Always
         ports:
         - containerPort: 5000

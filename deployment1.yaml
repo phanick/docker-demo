@@ -1,6 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
+  app: a5-python
   name: a5-python
 spec:
   selector:

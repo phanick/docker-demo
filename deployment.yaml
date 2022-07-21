@@ -33,7 +33,7 @@ spec:
     spec:
       containers:
       - name: my-python
-        image: phanick/my-python:latest
+        image: phanick/my-python:21
         imagePullPolicy: Always
         ports:
         - containerPort: 5000

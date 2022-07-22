@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: Service
 metadata:
-  app: a5-python
-  k8s-app: hello-python
-  name: a5-python
+  app: a6-python
+  k8s-app: a6-python
+  name: a6-python
 spec:
   selector:
-    app: a5-python
+    app: a6-python
   ports:
   - name: http
     protocol: TCP
@@ -19,21 +19,21 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: a5-python
+  name: a6-python
   
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: a5-python
+      app: a6-python
   template:
     metadata:
       labels:
-        app: a5-python
+        app: a6-python
     spec:
       containers:
-      - name: a5-python
-        image: phanick/a5-python:5
+      - name: a6-python
+        image: phanick/a6-python:6  
         imagePullPolicy: Always
         ports:
         - containerPort: 5000

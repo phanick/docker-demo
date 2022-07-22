@@ -1,14 +1,14 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: a7-python
+  name: a10-python
 spec:
   selector:
-    app: a7-python
+    app: a10-python
   ports:
   - name: http
     protocol: TCP
-    port: 6001
+    port: 6002
     targetPort: 5000
   type: LoadBalancer
 
@@ -17,21 +17,21 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: a7-python
+  name: a10-python
   
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: a7-python
+      app: a10-python
   template:
     metadata:
       labels:
-        app: a7-python
+        app: a10-python
     spec:
       containers:
-      - name: a7-python
-        image: phanick/a7-python:7
+      - name: a10-python
+        image: phanick/a10-python:10
         imagePullPolicy: Always
         ports:
         - containerPort: 5000
